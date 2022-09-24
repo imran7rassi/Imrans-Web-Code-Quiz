@@ -67,7 +67,6 @@ li {
 /* Header/Quiz Intro Section */
 
 .quiz-intro, main {
-    display: none;
     margin-bottom: 30vh;
     margin-left: 10%;
     margin-right: 10%;
@@ -85,7 +84,19 @@ li {
 }
 
 main {
-    display: block;
+    display: none;
+}
+
+.question-screen {
+    display: none;
+}
+
+.quiz-finish-screen {
+    display: none;
+}
+
+.highscores-screen {
+    display: none;
 }
 
 
