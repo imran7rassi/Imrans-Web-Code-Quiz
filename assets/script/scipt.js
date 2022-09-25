@@ -87,7 +87,7 @@ var questionSource = [
 
     var timeleft = document.getElementById("timer");
     
-    var secondleft = 60;
+    var secondsleft = 60;
     var questionNumber = 0;
     var totalScore = 0;
     var questionCount = 1;
@@ -98,9 +98,9 @@ var questionSource = [
         var timerInterval = setInterval(function () {
 
             secondsleft--;
-            timeleft.textContent = "Time left: " + secondsleft + " s";\
+            timeleft.textContent = "Time left: " + secondsleft + " s";
 
-                if (secondleft <= 0){
+                if (secondsleft <= 0){
                     clearInterval(timerInterval);
                     timeleft.textContent = "TIme is up!";
 
@@ -114,3 +114,15 @@ var questionSource = [
                 }
         }, 1000);
     }
+
+        //Click the button to start the quiz
+    function startQuiz () {
+    introPage.style.display = "none";
+    questionPage.style.display = "block";
+    questionNumber = 0
+    countdown();
+    showQuestion(questionNumber);
+  
+    }
+
+    
