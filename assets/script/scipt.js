@@ -125,4 +125,53 @@ var questionSource = [
   
     }
 
-    
+        //WHEN I answer a question,Show if answer is correct or wrong 
+    function checkAnswer(event) {
+        event.preventDefault();
+        //make it display
+        checkLine.style.display = "block";
+        setTimeout(function () {
+        checkLine.style.display = 'none';
+    }, 1000);
+
+    // answer check
+    if (questionSource[questionNumber].answer == event.target.value) {
+        checkLine.textContent = "Correct!"; 
+        totalScore = totalScore + 1;
+
+    } else {
+        secondsleft = secondsleft - 10;
+        checkLine.textContent = "Wrong! The correct answer is " + questionSource[questionNumber].answer + " .";
+    }
+         //THEN I am presented with another question
+    if (questionNumber < questionSource.length -1 ) {
+    // call showQuestions to bring in next question when any reactBtn is clicked
+        showQuestion(questionNumber +1);
+    } else {
+    gameOver();
+}
+questionCount++;
+}
+    //WHEN all questions are answered or the timer reaches 0, Game is over
+    function gameOver() {
+
+        questionPage.style.display = "none";
+        scoreBoard.style.display = "block";
+        console.log(scoreBoard);
+        // show final score
+        finalScore.textContent = "Your final score is :" + totalScore ;
+        // clearInterval(timerInterval);  
+        timeleft.style.display = "none"; 
+}
+
+// get current score and initials from local storage
+function getScore () {
+    var currentList =localStorage.getItem("ScoreList");
+    if (currentList !== null ){
+        freshList = JSON.parse(currentList);
+        return freshList;
+    } else {
+        freshList = [];
+    }
+    return freshList;
+};
