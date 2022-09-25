@@ -14,7 +14,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: center;
-    background-image: url("https://i.redd.it/dlj3efhjywy41.jpg");
+    background-image: url("https://cdn.wallpapersafari.com/37/19/yGVNWY.jpg");
     background-repeat: no-repeat;
     background-position:center; 
     background-size: cover;
@@ -72,7 +72,7 @@ li {
   
 @media only screen and (max-width: 960px) {
     body {
-      background-image: url("https://i.imgur.com/olFXHcr.gif");
+      background-image: url("https://images5.alphacoders.com/355/thumb-1920-355915.jpg");
     }
     main {
         margin-left:50px;
