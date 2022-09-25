@@ -83,4 +83,17 @@ var questionSource = [
         answer: "a"
     }
 ];
+        // set other variables //
 
+    var timeleft = document.getElementById("timer");
+    
+    var secondleft = 60;
+    var questionNumber = 0;
+    var totalScore = 0;
+    var questionCount = 1;
+    /* Functions */
+        // When I click the start button, THEN a timer starts(The setInterval() Method) //
+    function countdown() {
+
+        var timerInterval = 
+    }
