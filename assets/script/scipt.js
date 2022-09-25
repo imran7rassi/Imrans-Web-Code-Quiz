@@ -95,5 +95,22 @@ var questionSource = [
         // When I click the start button, THEN a timer starts(The setInterval() Method) //
     function countdown() {
 
-        var timerInterval = 
+        var timerInterval = setInterval(function () {
+
+            secondsleft--;
+            timeleft.textContent = "Time left: " + secondsleft + " s";\
+
+                if (secondleft <= 0){
+                    clearInterval(timerInterval);
+                    timeleft.textContent = "TIme is up!";
+
+                    // if time is up, show on score board content instead of "all done!" //
+                    finish.textContent = "Time is up!";
+                    gameOver();
+
+                } else if (questionCount >= questionSource.length +1) {
+                    clearInterval(timerInterval);
+                    gameOver();
+                }
+        }, 1000);
     }
