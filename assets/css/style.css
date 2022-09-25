@@ -1,108 +1,92 @@
-
-/* Global declarations */
 * {
-    margin: 0;
-    padding: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     box-sizing: border-box;
+}
 
-    /* global default font */
-    font-family: monospace;
-
-    /* debugging */
-    border: 1px solid blue;
-    color: white;
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 body {
-  background-color: rgb(75, 74, 75);  
-  overflow: hidden;
-}
-
-p {
-    font-size: 1.3em;
-}
-
-button {
-    outline: none;
-    background-color: black;
-    font-size: 1.3em;
-}
-
-h1, h2 {
-    color: rgb(251, 251, 132);
-    text-align: center;
-}
-
-li {
-    list-style: none;
-}
-
-
-/* Outer-Container section */
-.outer-container {
-    padding: 10px;
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: start;
-}
-
-/* Top-bar Container */
-.top-bar p {
-    float: right;
-}
-
-/* Inner-Container Section */
-.inner-container {
-    background-color: rgb(46, 46, 46);
-    height: 100%;
-    width: 50%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    min-height: 100vh;
     justify-content: center;
-}
-
-
-/* Header/Quiz Intro Section */
-
-.quiz-intro, main {
-    margin-bottom: 30vh;
-    margin-left: 10%;
-    margin-right: 10%;
-    background-color: rgb(99, 99, 99);
-}
-
-.quiz-intro p {
-    text-align: center;
-}
-
-.quiz-intro button {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-}
+    background-image: url("https://i.redd.it/dlj3efhjywy41.jpg");
+    background-repeat: no-repeat;
+    background-position:center; 
+    background-size: cover;
+  }
 
 main {
-    display: none;
+    text-align: center;
+    justify-content: center;
+    flex: 1 0 auto;
+    margin-left:200px;
+    margin-right:200px;
+}
+footer {
+    text-align: center;
 }
 
-.question-screen {
-    display: none;
+.question_page {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/*hide the bullet points from listings*/
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 50px;
+   }
+
+li {
+    margin-bottom: 10px;
 }
 
-.quiz-finish-screen {
-    display: none;
+/*display only the intro page and hide the rest sections*/
+.question_page, .submit_page, .highscore_page, #check_line {
+    display:none;
 }
 
-.highscores-screen {
-    display: none;
+.button{
+    background:white;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+.button:hover{
+  
+    background-color:rgb(205, 245, 247);
+  
 }
+  
+@media only screen and (max-width: 960px) {
+    body {
+      background-image: url("https://i.imgur.com/olFXHcr.gif");
+    }
+    main {
+        margin-left:50px;
+        margin-right:50px;
+    }
+  }
 
-
-
-
-
-
-/* Main Quiz Content */
-
+@media only screen and (max-width: 520px) {
+    body {
+      background-image: url("https://r1.ilikewallpaper.net/ipad-wallpapers/download/1517/Vector-Cat-ipad-wallpaper-ilikewallpaper_com.jpg");
+      font-size: 130%;
+    }
+    main {
+        margin-left:12px;
+        margin-right:12px;
+    }
+}
