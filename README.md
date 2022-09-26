@@ -87,7 +87,7 @@ Step 4 :When you complete all the questions, or the time runs out, your score wi
 Step 5 :After submiting your initial, you can always check Highscore record to see your top 5 scores.
 Step 6 :Clear the local record by simply hit the "clear Highscores" button.
 Please note that: The total time set for the quiz is 60 seconds. When you answer question wrong, 10 seconds will be subtracted from the timer.
-<img src="./assets/web-code-quiz.jpg." >
+<img src="./assets/images/web-code-quiz.jpg/" >
 
 
 ## Credits
