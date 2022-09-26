@@ -41,8 +41,7 @@
     var clearBtn=document.querySelector("#clear_btn");
     
     //Define questions (Object)
-var questionSource = [
-    {
+var questionSource = [ {
         question: "Questions 1 : String values must be enclosed within _____ when being assigned to variables.",
         choices: ["a. commas", "b. curly brackets", "c. quotes", "d. parenthesis"],
         answer: "c"
@@ -204,3 +203,65 @@ function sort () {
     })
     return unsortedList;
 }};
+// push new score and initial to the local storage
+function addItem (n) {
+    var addedList = getScore();
+    addedList.push(n);
+    localStorage.setItem("ScoreList", JSON.stringify(addedList));
+};
+
+function saveScore () {
+    var scoreItem ={
+        user: userInitial.value,
+        score: totalScore
+    }
+    addItem(scoreItem);
+    renderScore();
+}
+
+/* Add event listeners*/
+// startbtn to start the quiz
+startBtn.addEventListener("click", startQuiz);
+
+//click any choices button, go to the next question
+reactButtons.forEach(function(click){
+
+    click.addEventListener("click", checkAnswer);
+});
+
+//save information and go to next page
+submitBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    scoreBoard.style.display = "none";
+    introPage.style.display = "none";
+    highScorePage.style.display = "block";
+    questionPage.style.display ="none";
+    saveScore();
+});
+
+// check highscore ranking list
+scoreCheck.addEventListener("click", function(event) {
+    event.preventDefault();
+    scoreBoard.style.display = "none";
+    introPage.style.display = "none";
+    highScorePage.style.display = "block";
+    questionPage.style.display ="none";
+    renderScore();
+});
+
+//go back to main page
+backBtn.addEventListener("click",function(event){
+        event.preventDefault();
+        scoreBoard.style.display = "none";
+        introPage.style.display = "block";
+        highScorePage.style.display = "none";
+        questionPage.style.display ="none";
+        location.reload();
+});
+
+//clear local storage and clear page shows
+clearBtn.addEventListener("click",function(event) {
+    event.preventDefault();
+    localStorage.clear();
+    renderScore();
+});
