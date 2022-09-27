@@ -80,12 +80,13 @@ Function to check the answer is correct or wrong
 
 The link of the webpage is: https://imran7rassi.github.io/Imrans-Web-Code-Quiz/
 
-Step 1: Load the webpage.
-Step 2 :Click the "start" button to start the quiz and the timer.
-Step 3 :Choose one from the four choices and you will see whether your answer is correct right away.
-Step 4 :When you complete all the questions, or the time runs out, your score will be displayed and you can write down your initials and submit.
-Step 5 :After submiting your initial, you can always check Highscore record to see your top 5 scores.
-Step 6 :Clear the local record by simply hit the "clear Highscores" button.
+- Step 1: Load the webpage.
+- Step 2 :Click the "start" button to start the quiz and the timer.
+- Step 3 :Choose one from the four choices and you will see whether your answer is correct right away.
+- Step 4 :When you complete all the questions, or the time runs out, your score will be displayed and you can write down your initials and submit.
+- Step 5 :After submiting your initial, you can always check Highscore record to see your top 5 scores.
+- Step 6 :Clear the local record by simply hit the "clear Highscores" button.
+
 Please note that: The total time set for the quiz is 60 seconds. When you answer question wrong, 10 seconds will be subtracted from the timer.
 <img src="./assets/images/web-code-quiz.jpg/" >
 
